@@ -1,4 +1,4 @@
-# 关于本博客
+# ReadMe
 
 本博客是基于[leopard](http://baixin.io)的基础上做了简单的修改。
 
