@@ -1,4 +1,6 @@
-# leopard
+# 关于本博客
+
+本博客是基于[leopard](http://baixin.io)的基础上做了简单的修改。
 
 [leopard](http://baixin.io) 是一个简洁的博客模板，如果你也喜欢请 Star ，你的 Star 是我持续更新的动力, 谢谢 😄.
 
