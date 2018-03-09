@@ -1,0 +1,22 @@
+@startuml
+|Function A|
+start
+:push space for the return value;
+:push parameters;
+:push the return address;
+:(callq)jump to the function B;
+|#AntiqueWhite|Function B|
+:push the address of the previous stack frame;
+:push values of registers that this function uses (so they can be restored);
+:push space for local variables;
+:do the necessary computation;
+:(pop)restore the registers;
+:(pop)restore the previous stack frame
+;
+:(using register -- int long or stack(structure) or else double float)store the function result;
+:(retq) 
+jump to the return address;
+|Function A|
+:pop the return value;
+end
+@enduml
