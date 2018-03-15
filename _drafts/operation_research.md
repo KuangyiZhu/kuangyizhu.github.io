@@ -6,3 +6,7 @@ https://zhuanlan.zhihu.com/p/25579864?refer=operations-research　【学界】�
 https://www.zhihu.com/question/20887019　运筹学有哪些经典教材？
 
 https://www.zhihu.com/question/22686770
+
+
+http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
+http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
