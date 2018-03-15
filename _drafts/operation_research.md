@@ -9,4 +9,8 @@ https://www.zhihu.com/question/22686770
 
 
 http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
-http://www.bioinfo.org.cn/~wangchao/maa/Numerical_Optimization.pdf
+https://www.math.ucla.edu/~tom/LP.pdf
+
+
+特征工程
+https://www.zhihu.com/question/29316149
