@@ -14,3 +14,9 @@ https://www.math.ucla.edu/~tom/LP.pdf
 
 特征工程
 https://www.zhihu.com/question/29316149
+
+
+### dynamic programming vs. greedy 
+Both Greedy and dynamic programming algorithms construct an optimal solution of a subproblem based on optimal solutions of smaller subproblems. However, the main difference is that greedy algorithms have a local choice of the subproblem that will lead to an optimal answer. On the other hand, dynamic programming would solve all dependent subproblems and then select one that would lead to an optimal solution. 
+
+https://www.quora.com/Whats-the-difference-between-greedy-algorithm-and-dynamic-programming-Is-a-greedy-program-a-subset-of-dynamic-programming
