@@ -27,3 +27,4 @@ https://www.quora.com/Whats-the-difference-between-greedy-algorithm-and-dynamic-
 
 * https://web.mst.edu/~gosavia/tutorial.pdf
 * https://joshgreaves.com/
+* https://bluesmilery.github.io/blogs/b96003ba/
