@@ -37,3 +37,6 @@ instance1 x ∈ X, the second part being the heuristic policy π(φ(x), h), the
 probability of selecting h, where φ(x) are features of instance x, in the simplest
 * https://notendur.hi.is/tpr/papers/Ru11lion.pdf
 form φ(x) = x.
+
+### Complementry of slackness 
+* https://www.cs.cmu.edu/~ggordon/10725-F12/slides/16-kkt.pdf
