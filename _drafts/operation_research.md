@@ -29,3 +29,11 @@ https://www.quora.com/Whats-the-difference-between-greedy-algorithm-and-dynamic-
 * https://joshgreaves.com/
 * https://bluesmilery.github.io/blogs/b96003ba/
 * https://www.zhihu.com/question/26408259
+
+A recent overview on methods of automating the heuristic design process
+is given in [2,5]. In general we can split the heuristic design process into two
+parts; the first being the actual heuristic h or operator used to modify or create
+instance1 x ∈ X, the second part being the heuristic policy π(φ(x), h), the
+probability of selecting h, where φ(x) are features of instance x, in the simplest
+* https://notendur.hi.is/tpr/papers/Ru11lion.pdf
+form φ(x) = x.
