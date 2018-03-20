@@ -1,5 +1,6 @@
 
 https://zhuanlan.zhihu.com/p/30140008 运筹学
+https://zhuanlan.zhihu.com/p/27429666 
 
 https://zhuanlan.zhihu.com/p/28958014 有约束转无约束，拉格朗日松弛观点下的L1正则化稀疏性探讨
 https://zhuanlan.zhihu.com/p/25579864?refer=operations-research　【学界】人工智能的“引擎”--运筹学，一门建模、优化、决策的科学
