@@ -25,4 +25,5 @@ https://www.quora.com/Whats-the-difference-between-greedy-algorithm-and-dynamic-
 
 ### Reinforcement Learning and Dynamic programming
 
-https://web.mst.edu/~gosavia/tutorial.pdf
+* https://web.mst.edu/~gosavia/tutorial.pdf
+* https://joshgreaves.com/
