@@ -93,6 +93,81 @@ Col001                                                                          
 3
 可知core里有1000个ABC，遍历使用ABC的代码，可知存在泄漏。
 
+### 死锁
+
+清单 7. 切换到线程 5 的输出
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+(gdb) thread 5 
+[Switching to thread 5 (Thread 0x41e37940 (LWP 6722))]#0  0x0000003d1a80d4c4 in 
+__lll_lock_wait () from /lib64/libpthread.so.0 
+(gdb) where 
+#0  0x0000003d1a80d4c4 in __lll_lock_wait () from /lib64/libpthread.so.0 
+#1  0x0000003d1a808e1a in _L_lock_1034 () from /lib64/libpthread.so.0 
+#2  0x0000003d1a808cdc in pthread_mutex_lock () from /lib64/libpthread.so.0 
+#3  0x0000000000400a9b in func1 () at lock.cpp:18 
+#4  0x0000000000400ad7 in thread1 (arg=0x0) at lock.cpp:43 
+#5  0x0000003d1a80673d in start_thread () from /lib64/libpthread.so.0 
+#6  0x0000003d19cd40cd in clone () from /lib64/libc.so.6
+清单 8. 线程 4 和线程 5 的输出
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+(gdb) f 3 
+#3  0x0000000000400a9b in func1 () at lock.cpp:18 
+18          pthread_mutex_lock(&mutex2); 
+(gdb) thread 4 
+[Switching to thread 4 (Thread 0x42838940 (LWP 6723))]#0  0x0000003d1a80d4c4 in 
+__lll_lock_wait () from /lib64/libpthread.so.0 
+(gdb) f 3 
+#3  0x0000000000400a17 in func2 () at lock.cpp:31 
+31          pthread_mutex_lock(&mutex1); 
+(gdb) p mutex1 
+$1 = {__data = {__lock = 2, __count = 0, __owner = 6722, __nusers = 1, __kind = 0, 
+__spins = 0, __list = {__prev = 0x0, __next = 0x0}}, 
+ __size = "\002\000\000\000\000\000\000\000B\032\000\000\001", '\000'
+<repeats 26 times>, __align = 2} 
+(gdb) p mutex3 
+$2 = {__data = {__lock = 0, __count = 0, __owner = 0, __nusers = 0, 
+__kind = 0, __spins = 0, __list = {__prev = 0x0, __next = 0x0}}, 
+__size = '\000' <repeats 39 times>, __align = 0} 
+(gdb) p mutex2 
+$3 = {__data = {__lock = 2, __count = 0, __owner = 6723, __nusers = 1, 
+__kind = 0, __spins = 0, __list = {__prev = 0x0, __next = 0x0}}, 
+ __size = "\002\000\000\000\000\000\000\000C\032\000\000\001", '\000'
+<repeats 26 times>, __align = 2} 
+(gdb)
+
 
 ### reference
 * http://blog.jobbole.com/107759/ gdb 调试入门，大牛写的高质量指南
