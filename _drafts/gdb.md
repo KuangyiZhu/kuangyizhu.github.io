@@ -168,6 +168,8 @@ __kind = 0, __spins = 0, __list = {__prev = 0x0, __next = 0x0}},
 <repeats 26 times>, __align = 2} 
 (gdb)
 
+### calling convetion
+if it is x86_64_ABI , count the instructions in reverse order, if it matches then it is x86_64_ABI
 
 ### reference
 * http://blog.jobbole.com/107759/ gdb 调试入门，大牛写的高质量指南
