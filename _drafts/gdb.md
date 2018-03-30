@@ -175,6 +175,8 @@ if it is x86_64_ABI , count the instructions in reverse order, if it matches the
 
 ### gcc version number
 
+### gdb source path
+有时gdb不能准确地定位到源文件的位置（比如文件被移走了，等等），此时可以用directory命令设置查找源文件的路径。以上面程序为例：
 
 
 ### reference
@@ -185,3 +187,4 @@ if it is x86_64_ABI , count the instructions in reverse order, if it matches the
 * http://www.cnblogs.com/gqtcgq/p/7530384.html
 * http://blog.51cto.com/hipercomer/855223
 * https://stackoverflow.com/questions/16349557/does-gcc-have-any-options-to-add-version-info-in-elf-binary-file
+* https://wizardforcel.gitbooks.io/100-gdb-tips/directory.html
