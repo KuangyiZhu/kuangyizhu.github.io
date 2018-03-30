@@ -189,3 +189,4 @@ if it is x86_64_ABI , count the instructions in reverse order, if it matches the
 * https://stackoverflow.com/questions/16349557/does-gcc-have-any-options-to-add-version-info-in-elf-binary-file
 * https://wizardforcel.gitbooks.io/100-gdb-tips/directory.html
 * https://stackoverflow.com/questions/45236977/extract-a-string-variable-from-elf-obj-file
+* http://xq.dropsec.xyz/2016/11/12/GDB%E5%AF%84%E5%AD%98%E5%99%A8%E5%92%8C%E5%86%85%E5%AD%98%E6%9F%A5%E8%AF%A2%E6%8C%87%E4%BB%A4/
