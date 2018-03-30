@@ -178,6 +178,9 @@ if it is x86_64_ABI , count the instructions in reverse order, if it matches the
 ### gdb source path
 有时gdb不能准确地定位到源文件的位置（比如文件被移走了，等等），此时可以用directory命令设置查找源文件的路径。以上面程序为例：
 
+### 多线程调试
+set scheduler-locking off|on|step 估计是实际使用过多线程调试的人都可以发现，在使用step或者continue命令调试当前被调试线程的时候，其他线程也是同时执行的，怎么只让被调试程序执行呢？通过这个命令就可以实现这个需求。off 不锁定任何线程，也就是所有线程都执行，这是默认值。 on 只有当前被调试程序会执行。 step 在单步的时候，除了next过一个函数的情况(熟悉情况的人可能知道，这其实是一个设置断点然后continue的行为)以外，只有当前线程会执行。
+
 
 ### reference
 * http://blog.jobbole.com/107759/ gdb 调试入门，大牛写的高质量指南
