@@ -173,6 +173,9 @@ if it is x86_64_ABI , count the instructions in reverse order, if it matches the
 
 ### Name Mangling
 
+### gcc version number
+
+
 
 ### reference
 * http://blog.jobbole.com/107759/ gdb 调试入门，大牛写的高质量指南
@@ -181,3 +184,4 @@ if it is x86_64_ABI , count the instructions in reverse order, if it matches the
 * https://c9x.me/compile/doc/abi.html System V ABI AMD64
 * http://www.cnblogs.com/gqtcgq/p/7530384.html
 * http://blog.51cto.com/hipercomer/855223
+* https://stackoverflow.com/questions/16349557/does-gcc-have-any-options-to-add-version-info-in-elf-binary-file
