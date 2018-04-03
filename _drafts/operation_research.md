@@ -40,3 +40,7 @@ form φ(x) = x.
 
 ### Complementry of slackness 
 * https://www.cs.cmu.edu/~ggordon/10725-F12/slides/16-kkt.pdf
+
+
+### 最优化方法
+http://person.zju.edu.cn/attachments/2016-11/07-1479199468-702282.pdf
