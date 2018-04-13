@@ -187,6 +187,9 @@ set scheduler-locking off|on|step 估计是实际使用过多线程调试的人�
 找到rodata section objdump -h exe 看offset
 xxd exe
 
+### link two obj file
+g++ dump_orders.cpp -o b.out version.os
+
 
 ### reference
 * http://blog.jobbole.com/107759/ gdb 调试入门，大牛写的高质量指南
