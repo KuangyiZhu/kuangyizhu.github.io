@@ -169,7 +169,9 @@ __kind = 0, __spins = 0, __list = {__prev = 0x0, __next = 0x0}},
 (gdb)
 
 ### calling convetion
-if it is x86_64_ABI , count the instructions in reverse order, if it matches then it is x86_64_ABI
+readelf -h binary
+
+the calling convention and its version will be displayed in OS/ABI and ABI Version
 
 ### Name Mangling
 
