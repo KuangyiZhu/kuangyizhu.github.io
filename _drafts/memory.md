@@ -9,3 +9,4 @@ stack 生成的自動物件，都會在 out-of-block 的時候，呼叫 destruct
 ### reference
 * https://medium.com/@andrestc/implementing-malloc-and-free-ba7e7704a473 malloc
 * https://blog.csdn.net/jasonblog/article/details/5989224 delete this
+* https://git.kernel.org/pub/scm/virt/kvm/kvm.git/tree/Documentation/memory-barriers.txt memory barrier
