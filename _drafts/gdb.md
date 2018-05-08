@@ -190,6 +190,9 @@ xxd exe
 ### link two obj file
 g++ dump_orders.cpp -o b.out version.os
 
+### 跳转
+jump +1
+
 
 ### reference
 * http://blog.jobbole.com/107759/ gdb 调试入门，大牛写的高质量指南
