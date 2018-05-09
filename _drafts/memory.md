@@ -28,9 +28,15 @@ majflt代表major fault，中文名叫大错误，minflt代表minor fault，中�
 
 如果第3步，需要读取磁盘，那么这次缺页中断就是majflt，否则就是minflt。
 
+默认情况下，malloc函数分配内存，如果请求内存大于128K（可由M_MMAP_THRESHOLD选项调节），那就不是去推_edata指针了，而是利用mmap系统调用，从堆和栈的中间分配一块虚拟内存。
+
+这样子做主要是因为::
+brk分配的内存需要等到高地址内存释放以后才能释放（例如，在B释放之前，A是不可能释放的，这就是内存碎片产生的原因，什么时候紧缩看下面），而mmap分配的内存可以单独释放。
+
 
 ### reference
 * [1] https://medium.com/@andrestc/implementing-malloc-and-free-ba7e7704a473 implementing malloc and free
 * [2] https://blog.csdn.net/jasonblog/article/details/5989224 delete this
 * [3] https://git.kernel.org/pub/scm/virt/kvm/kvm.git/tree/Documentation/memory-barriers.txt memory barrier
 * [4] https://vinoit.me/2016/05/20/linux-memory-alloc/ Linux内存分配的原理--malloc/brk/mmap
+* [5] https://yangrz.github.io/blog/2017/12/20/ptmalloc/ 聊聊glibc ptmalloc内存管理哪些事儿
