@@ -46,3 +46,4 @@
 * [3] https://blog.csdn.net/pbymw8iwm/article/details/8227839 GCC在C语言中内嵌汇编 asm __volatile__
 * [4] http://senlinzhan.github.io/2017/12/04/cpp-memory-order/ 理解 C++ 的 Memory Order
 * [5] http://hpca23.cse.tamu.edu/taco/utsa-www/cs5513-fall07/lecture5.html Lecture 5: Out-of-order Execution
+* https://git.kernel.org/pub/scm/virt/kvm/kvm.git/tree/Documentation/memory-barriers.txt kvm/kvm.git
