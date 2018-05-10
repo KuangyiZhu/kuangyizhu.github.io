@@ -47,3 +47,5 @@
 * [4] http://senlinzhan.github.io/2017/12/04/cpp-memory-order/ 理解 C++ 的 Memory Order
 * [5] http://hpca23.cse.tamu.edu/taco/utsa-www/cs5513-fall07/lecture5.html Lecture 5: Out-of-order Execution
 * https://git.kernel.org/pub/scm/virt/kvm/kvm.git/tree/Documentation/memory-barriers.txt kvm/kvm.git
+* [6] https://blog.csdn.net/dd864140130/article/details/56494925 谈乱序执行和内存屏障
+* [7] https://blog.csdn.net/gjq_1988/article/details/39520729 （转）CPU乱序执行原理
