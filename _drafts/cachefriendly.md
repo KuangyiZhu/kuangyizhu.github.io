@@ -1,5 +1,5 @@
 ### Atomic
-```
+```cpp
     using AtomicDefaultSet::Set;
 
     template <typename T>
