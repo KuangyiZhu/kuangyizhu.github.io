@@ -33,6 +33,25 @@ majflt代表major fault，中文名叫大错误，minflt代表minor fault，中�
 这样子做主要是因为::
 brk分配的内存需要等到高地址内存释放以后才能释放（例如，在B释放之前，A是不可能释放的，这就是内存碎片产生的原因，什么时候紧缩看下面），而mmap分配的内存可以单独释放。
 
+### Memory Fragmentation
+
+To see memory fragmentation you can use the magic SysRq key. Simply execute the following command:
+```
+# echo m > /proc/sysrq-trigger
+```
+This command will dump current memory information to /var/log/messages. Here is an example of a RHEL3 32-bit system:
+```
+Jul 23 20:19:30 localhost kernel: 0*4kB 0*8kB 0*16kB 1*32kB 0*64kB 1*128kB 1*256kB 1*512kB 1*1024kB 0*2048kB 0*4096kB = 1952kB)
+Jul 23 20:19:30 localhost kernel: 1395*4kB 355*8kB 209*16kB 15*32kB 0*64kB 0*128kB 0*256kB 0*512kB 0*1024kB 0*2048kB 0*4096kB = 12244kB)
+Jul 23 20:19:31 localhost kernel: 1479*4kB 673*8kB 205*16kB 73*32kB 21*64kB 847*128kB 473*256kB 92*512kB 164*1024kB 64*2048kB 28*4096kB = 708564kB)
+```
+The first line shows DMA memory fragmentation. The second line shows Low Memory fragmentation and the third line shows High Memory fragmentation. The output shows memory fragmentation in the Low Memory area. But there are many large memory chunks available in the High Memory area, e.g. 28 4MB.
+
+If memory information was not dumped to /var/log/messages, then SysRq was not enabled. You can enable SysRq by setting sysrq to 1:
+
+```
+# echo 1 > /proc/sys/kernel/sysrq
+```
 
 ### reference
 * [1] https://medium.com/@andrestc/implementing-malloc-and-free-ba7e7704a473 implementing malloc and free
@@ -40,3 +59,4 @@ brk分配的内存需要等到高地址内存释放以后才能释放（例如�
 * [3] https://git.kernel.org/pub/scm/virt/kvm/kvm.git/tree/Documentation/memory-barriers.txt memory barrier
 * [4] https://vinoit.me/2016/05/20/linux-memory-alloc/ Linux内存分配的原理--malloc/brk/mmap
 * [5] https://yangrz.github.io/blog/2017/12/20/ptmalloc/ 聊聊glibc ptmalloc内存管理哪些事儿
+* [6] https://stackoverflow.com/questions/4863707/how-to-see-linux-view-of-the-ram-in-order-to-determinate-the-fragmentation Memory Fragmentation
