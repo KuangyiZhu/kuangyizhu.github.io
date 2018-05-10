@@ -44,3 +44,4 @@
 * [1] https://zhuanlan.zhihu.com/p/31386431 memory order
 * [2] http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.152.5245&rep=rep1&type=pdf Memory Barriers: a Hardware View for Software Hackers
 * [3] https://blog.csdn.net/pbymw8iwm/article/details/8227839 GCC在C语言中内嵌汇编 asm __volatile__
+* [4] http://senlinzhan.github.io/2017/12/04/cpp-memory-order/ 理解 C++ 的 Memory Order
