@@ -6,3 +6,5 @@ Reaching Definition
 * [2] https://zh.wikipedia.org/wiki/%E5%B8%B8%E6%95%B8%E6%8A%98%E7%96%8A 常数折叠
 * [3] https://zh.wikipedia.org/wiki/%E5%AE%9A%E7%BE%A9%E5%8F%AF%E9%81%94%E6%80%A7 定义可达性
 * [4] https://zh.wikipedia.org/wiki/%E5%BC%B7%E5%BA%A6%E6%8A%98%E6%B8%9B 強度折減
+* [5] https://gcc.gnu.org/projects/tree-ssa/vectorization.html Auto-vectorization in GCC
+* [6] http://blog.shengbin.me/posts/gcc-attribute-aligned-and-packed GCC中的aligned和packed属性
