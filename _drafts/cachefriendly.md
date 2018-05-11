@@ -49,3 +49,4 @@
 * https://git.kernel.org/pub/scm/virt/kvm/kvm.git/tree/Documentation/memory-barriers.txt kvm/kvm.git
 * [6] https://blog.csdn.net/dd864140130/article/details/56494925 谈乱序执行和内存屏障
 * [7] https://blog.csdn.net/gjq_1988/article/details/39520729 （转）CPU乱序执行原理
+* [8] https://www.stardog.com/blog/writing-cache-friendly-code/ writing-cache-friendly-code
