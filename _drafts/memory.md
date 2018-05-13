@@ -60,3 +60,4 @@ If memory information was not dumped to /var/log/messages, then SysRq was not en
 * [4] https://vinoit.me/2016/05/20/linux-memory-alloc/ Linux内存分配的原理--malloc/brk/mmap
 * [5] https://yangrz.github.io/blog/2017/12/20/ptmalloc/ 聊聊glibc ptmalloc内存管理哪些事儿
 * [6] https://stackoverflow.com/questions/4863707/how-to-see-linux-view-of-the-ram-in-order-to-determinate-the-fragmentation Memory Fragmentation
+* [7] https://blog.csdn.net/mrliucsdn/article/details/51019918 glibc---memcpy源码
