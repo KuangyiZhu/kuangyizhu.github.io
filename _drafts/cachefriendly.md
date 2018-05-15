@@ -50,3 +50,4 @@
 * [6] https://blog.csdn.net/dd864140130/article/details/56494925 谈乱序执行和内存屏障
 * [7] https://blog.csdn.net/gjq_1988/article/details/39520729 （转）CPU乱序执行原理
 * [8] https://www.stardog.com/blog/writing-cache-friendly-code/ writing-cache-friendly-code
+* [9] http://wiki.csie.ncku.edu.tw/embedded/perf-tutorial Linux 效能分析工具: Perf
