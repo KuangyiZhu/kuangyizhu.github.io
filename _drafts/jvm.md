@@ -15,7 +15,7 @@ java org.kzhu.HelloWorld
 >jar -cvfm HelloWorld.jar manifest.txt HelloWorld.class   #添加清单信息到jar包
 ```
 
-### class path
+#### class path
 ```
 Update the PATH Variable (Solaris and Linux)
 
@@ -67,6 +67,11 @@ On Solaris or Linux, execute the following:
 
 % echo $CLASSPATH
 ```
+#### 查看字节码
+```
+javap -c test.class
+```
+
 
 ### references
 * [1] https://docs.oracle.com/javase/tutorial/essential/environment/paths.html PATH and CLASSPATH
