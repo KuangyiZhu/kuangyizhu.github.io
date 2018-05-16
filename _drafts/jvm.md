@@ -3,7 +3,10 @@
 ```
 javac src/org/kzhu/* -d bin/
 ```
-
+#### execute
+```
+java org.kzhu.HelloWorld
+```
 
 ### references
 
