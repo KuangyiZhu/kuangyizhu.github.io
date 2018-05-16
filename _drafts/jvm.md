@@ -71,7 +71,18 @@ On Solaris or Linux, execute the following:
 ```
 javap -c test.class
 ```
+#### jstack
+```
+jstack pid
+jstack -m pid #dump native frame
+jstack -l pid #also dump locks
+```
 
+#### jmap
+```
+jmap -heap pid #print heap summary
+jmap pid #print the memory mapping
+```
 
 ### references
 * [1] https://docs.oracle.com/javase/tutorial/essential/environment/paths.html PATH and CLASSPATH
