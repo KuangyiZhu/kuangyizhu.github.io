@@ -208,3 +208,4 @@ jump +1
 * http://www.cnblogs.com/xuxm2007/archive/2011/04/01/2002162.html
 * http://www.cnblogs.com/ilocker/p/4604802.html
 * https://stackoverflow.com/questions/29935915/finding-strings-in-the-text-section
+* https://www.tecmint.com/find-out-which-process-listening-on-a-particular-port/
