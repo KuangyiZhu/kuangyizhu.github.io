@@ -62,3 +62,5 @@ If memory information was not dumped to /var/log/messages, then SysRq was not en
 * [6] https://stackoverflow.com/questions/4863707/how-to-see-linux-view-of-the-ram-in-order-to-determinate-the-fragmentation Memory Fragmentation
 * [7] https://blog.csdn.net/mrliucsdn/article/details/51019918 glibc---memcpy源码
 * [8] https://www.jianshu.com/p/494c2d32e3bb 从 0 开始学习 Linux 系列之「22.共享内存 Shared Memory」
+* [9] https://www.codeproject.com/Articles/338268/COM-in-C
+* [10] https://social.msdn.microsoft.com/Forums/vstudio/en-US/f49bb4d7-bb5f-46e3-9fa0-61b1b3c5d440/cocreateinstance-threadsafe?forum=vclanguage
