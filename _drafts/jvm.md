@@ -84,6 +84,40 @@ jmap -heap pid #print heap summary
 jmap pid #print the memory mapping
 ```
 
+#### misc
+2. Java
+ 2.3. jni and principle
+ 2.4. enumurable
+    http://www.hollischuang.com/archives/205
+ 2.7. JIT book
+ 2.8. Java TI
+ 2.9. all java local threads
+    http://www.xiuson.com/?p=203
+    https://blog.csdn.net/chenxiusheng/article/details/74007750
+    https://blog.csdn.net/neosmith/article/details/79614838
+    https://www.ezlippi.com/blog/2018/01/linux-high-load.html
+    http://www.rowkey.me/blog/2016/11/02/java-profile/
+ 2.10.spring
+ 2.11.gc
+  <https://www.cubrid.org/blog/understanding-java-garbage-collection/
+  https://www.cubrid.org/blog/how-to-monitor-java-garbage-collection/
+  http://www.oracle.com/technetwork/articles/java/vmoptions-jsp-140102.html
+  https://www.javacodegeeks.com/2011/07/jvm-options-client-vs-server.html
+The Server VM contains an advanced adaptive compiler that supports many of the same types of optimizations performed by optimizing C++ compilers, as well as some optimizations that cannot be done by traditional compilers, such as aggressive inlining across virtual method invocations. This is a competitive and performance advantage over static compilers. Adaptive optimization technology is very flexible in its approach, and typically outperforms even advanced static analysis and compilation techniques.
+
+Both solutions deliver extremely reliable, secure, and maintainable environments to meet the demands of today’s enterprise customers.
+
+Default options:
+
+For Hotspot is client
+For JRockit is server
+ https://www.cubrid.org/blog/how-to-tune-java-garbage-collection/
+ 2.12. JMH
+ 2.13. serialization
+ 2.14. how actually java works
+
+
+
 ### references
 * [1] https://docs.oracle.com/javase/tutorial/essential/environment/paths.html PATH and CLASSPATH
 
