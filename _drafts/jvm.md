@@ -87,6 +87,7 @@ jmap pid #print the memory mapping
 #### misc
 2. Java
  2.3. jni and principle
+    https://blog.csdn.net/hackooo/article/details/48395765/
  2.4. enumurable
     http://www.hollischuang.com/archives/205
  2.7. JIT book
