@@ -174,13 +174,13 @@ fuser file
 * [2] https://blog.csdn.net/baidu_mtc/article/details/50504608 利用进程信息追查内存泄漏
 * [3] https://en.wikipedia.org/wiki/X86_calling_conventions calling convention
 * [4] https://c9x.me/compile/doc/abi.html System V ABI AMD64
-* [5] http://www.cnblogs.com/gqtcgq/p/7530384.html
-* [6] http://blog.51cto.com/hipercomer/855223
-* [7] https://stackoverflow.com/questions/16349557/does-gcc-have-any-options-to-add-version-info-in-elf-binary-file
-* [8] https://wizardforcel.gitbooks.io/100-gdb-tips/directory.html
-* [9] https://stackoverflow.com/questions/45236977/extract-a-string-variable-from-elf-obj-file
-* [10] http://xq.dropsec.xyz/2016/11/12/GDB%E5%AF%84%E5%AD%98%E5%99%A8%E5%92%8C%E5%86%85%E5%AD%98%E6%9F%A5%E8%AF%A2%E6%8C%87%E4%BB%A4/
-* [11] http://www.cnblogs.com/xuxm2007/archive/2011/04/01/2002162.html
-* [12] http://www.cnblogs.com/ilocker/p/4604802.html
-* [13] https://stackoverflow.com/questions/29935915/finding-strings-in-the-text-section
-* [14] https://www.tecmint.com/find-out-which-process-listening-on-a-particular-port/
+* [5] http://www.cnblogs.com/gqtcgq/p/7530384.html 使用pstack和gdb调试死锁
+* [6] http://blog.51cto.com/hipercomer/855223 Name Mangling in C++
+* [7] https://stackoverflow.com/questions/16349557/does-gcc-have-any-options-to-add-version-info-in-elf-binary-file Does gcc have any options to add version info in ELF binary file?
+* [8] https://wizardforcel.gitbooks.io/100-gdb-tips/directory.html 设置源文件查找路径
+* [9] https://stackoverflow.com/questions/45236977/extract-a-string-variable-from-elf-obj-file Extract a string variable from elf/obj file
+* [10] http://xq.dropsec.xyz/2016/11/12/GDB%E5%AF%84%E5%AD%98%E5%99%A8%E5%92%8C%E5%86%85%E5%AD%98%E6%9F%A5%E8%AF%A2%E6%8C%87%E4%BB%A4/ GDB寄存器和内存查询指令
+* [11] http://www.cnblogs.com/xuxm2007/archive/2011/04/01/2002162.html gdb 多线程调试
+* [12] http://www.cnblogs.com/ilocker/p/4604802.html ELF Format 笔记（五）—— 特殊 Section
+* [13] https://stackoverflow.com/questions/29935915/finding-strings-in-the-text-section Finding strings in the text section
+* [14] https://www.tecmint.com/find-out-which-process-listening-on-a-particular-port/ 3 Ways to Find Out Which Process Listening on a Particular Port
