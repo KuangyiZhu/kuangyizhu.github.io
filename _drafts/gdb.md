@@ -39,9 +39,6 @@ cond 1 $rdi==0x0
 #### 外部工具：perf-tools/ftrace/uprobes
 * uprobe 'p:/lib/x86_64-linux-gnu/libtinfo.so.5:set_curterm %di'
 
-### x86_64_ABI
-man syscall
-
 #### 返回命令
 ret
 
