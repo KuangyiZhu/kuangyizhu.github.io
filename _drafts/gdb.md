@@ -45,6 +45,10 @@ man syscall
 #### 返回命令
 ret
 
+#### 跳转
+jump +1
+
+
 ###实战
 #### 查看vtable
 * 64位应用程序，所以指针占8字节。所以需要遍历的指针个数为135168/8=16896。 
@@ -137,49 +141,47 @@ __kind = 0, __spins = 0, __list = {__prev = 0x0, __next = 0x0}},
 <repeats 26 times>, __align = 2} 
 (gdb)
 ```
-### calling convetion
-readelf -h binary
 
-the calling convention and its version will be displayed in OS/ABI and ABI Version
+### 其他技巧
 
-### Name Mangling
+#### calling convetion
+* command ```readelf -h binary```
+* the calling convention and its version will be displayed in OS/ABI and ABI Version
 
-### gcc version number
+#### Name Mangling
+* command ```c++filter```
 
 ### gdb source path
-有时gdb不能准确地定位到源文件的位置（比如文件被移走了，等等），此时可以用directory命令设置查找源文件的路径。以上面程序为例：
+有时gdb不能准确地定位到源文件的位置（比如文件被移走了，等等），此时可以用directory命令设置查找源文件的路径
 
 ### 多线程调试
 set scheduler-locking off|on|step 估计是实际使用过多线程调试的人都可以发现，在使用step或者continue命令调试当前被调试线程的时候，其他线程也是同时执行的，怎么只让被调试程序执行呢？通过这个命令就可以实现这个需求。off 不锁定任何线程，也就是所有线程都执行，这是默认值。 on 只有当前被调试程序会执行。 step 在单步的时候，除了next过一个函数的情况(熟悉情况的人可能知道，这其实是一个设置断点然后continue的行为)以外，只有当前线程会执行。
 
-### 查常量的值
-找到rodata section objdump -h exe 看offset
-xxd exe
+#### 查常量的值
+* 找到rodata section by ```objdump -h [exe]``` 看offset
+* xxd exe
 
-### link two obj file
+#### link two obj file
 g++ dump_orders.cpp -o b.out version.os
 
-### 跳转
-jump +1
-
-###
+#### 查看打开的网络端口
 net stat -lnp
 lsof -p pid
 fuser file
 
 
 ### reference
-* http://blog.jobbole.com/107759/ gdb 调试入门，大牛写的高质量指南
-* https://blog.csdn.net/baidu_mtc/article/details/50504608 利用进程信息追查内存泄漏
-* https://en.wikipedia.org/wiki/X86_calling_conventions calling convention
-* https://c9x.me/compile/doc/abi.html System V ABI AMD64
-* http://www.cnblogs.com/gqtcgq/p/7530384.html
-* http://blog.51cto.com/hipercomer/855223
-* https://stackoverflow.com/questions/16349557/does-gcc-have-any-options-to-add-version-info-in-elf-binary-file
-* https://wizardforcel.gitbooks.io/100-gdb-tips/directory.html
-* https://stackoverflow.com/questions/45236977/extract-a-string-variable-from-elf-obj-file
-* http://xq.dropsec.xyz/2016/11/12/GDB%E5%AF%84%E5%AD%98%E5%99%A8%E5%92%8C%E5%86%85%E5%AD%98%E6%9F%A5%E8%AF%A2%E6%8C%87%E4%BB%A4/
-* http://www.cnblogs.com/xuxm2007/archive/2011/04/01/2002162.html
-* http://www.cnblogs.com/ilocker/p/4604802.html
-* https://stackoverflow.com/questions/29935915/finding-strings-in-the-text-section
-* https://www.tecmint.com/find-out-which-process-listening-on-a-particular-port/
+* [1] http://blog.jobbole.com/107759/ gdb 调试入门，大牛写的高质量指南
+* [2] https://blog.csdn.net/baidu_mtc/article/details/50504608 利用进程信息追查内存泄漏
+* [3] https://en.wikipedia.org/wiki/X86_calling_conventions calling convention
+* [4] https://c9x.me/compile/doc/abi.html System V ABI AMD64
+* [5] http://www.cnblogs.com/gqtcgq/p/7530384.html
+* [6] http://blog.51cto.com/hipercomer/855223
+* [7] https://stackoverflow.com/questions/16349557/does-gcc-have-any-options-to-add-version-info-in-elf-binary-file
+* [8] https://wizardforcel.gitbooks.io/100-gdb-tips/directory.html
+* [9] https://stackoverflow.com/questions/45236977/extract-a-string-variable-from-elf-obj-file
+* [10] http://xq.dropsec.xyz/2016/11/12/GDB%E5%AF%84%E5%AD%98%E5%99%A8%E5%92%8C%E5%86%85%E5%AD%98%E6%9F%A5%E8%AF%A2%E6%8C%87%E4%BB%A4/
+* [11] http://www.cnblogs.com/xuxm2007/archive/2011/04/01/2002162.html
+* [12] http://www.cnblogs.com/ilocker/p/4604802.html
+* [13] https://stackoverflow.com/questions/29935915/finding-strings-in-the-text-section
+* [14] https://www.tecmint.com/find-out-which-process-listening-on-a-particular-port/
