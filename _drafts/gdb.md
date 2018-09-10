@@ -1,31 +1,27 @@
+---
+layout: post
+title: "【胴】gdb技巧"
+date: 2018-09-10 
+description: "gdb的使用技巧"
+tag: 胴
+---
+
+### gdb的常用命令
 #### 反汇编
-disas funcname
-安装了调试信息之后，gdb 可以同时列出源码和汇编
-disas/s
+* disas funcname
+* 安装了调试信息之后，gdb 可以同时列出源码和汇编
+* disas/s
 
 #### 查看寄存器
-使用 i r（info registers 的简写）打印寄存器值：
-你可以使用 i proc m （info proc mappings 的简写）核查零是不是有效地址
+* 使用 i r（info registers 的简写）打印寄存器值：
+* 你可以使用 i proc m （info proc mappings 的简写）核查零是不是有效地址
 
 #### 单步调试
 我跳到下一条指令（si，stepi的简写），然后检查寄存器
 
 #### 回退
-record
-reverse-stepi
-
-### tui
-有必要看看这些代码在 gdb 的文本用户界面（TUI）里是什么样的，我用的不多，是看了 Greg 的演讲之后受到的启发。
-
-你可以用 –tui 来启动
-
-用 layout split 命令，我们可以在不同的窗口查看源代码和汇编代码
-
-#### 外部工具：perf-tools/ftrace/uprobes
-uprobe 'p:/lib/x86_64-linux-gnu/libtinfo.so.5:set_curterm %di'
-
-#### x86_64_ABI
-man syscall
+* record
+* reverse-stepi
 
 #### 写内存
 set
@@ -34,13 +30,27 @@ set
 b set_curterm
 cond 1 $rdi==0x0
 
+### tui - 图形界面
+* 有必要看看这些代码在 gdb 的文本用户界面（TUI）里是什么样的，我用的不多，是看了 Greg 的演讲之后受到的启发。
+* 你可以用 –tui 来启动
+* 用 layout split 命令，我们可以在不同的窗口查看源代码和汇编代码
+* Ctrl - A 切换
+
+#### 外部工具：perf-tools/ftrace/uprobes
+* uprobe 'p:/lib/x86_64-linux-gnu/libtinfo.so.5:set_curterm %di'
+
+### x86_64_ABI
+man syscall
+
 #### 返回命令
 ret
 
+###实战
+#### 查看vtable
+* 64位应用程序，所以指针占8字节。所以需要遍历的指针个数为135168/8=16896。 
+* 将结果输出到日志文件gdb.txt中：
 
-3） 因为是64位应用程序，所以指针占8字节。所以需要遍历的指针个数为135168/8=16896。 
-4） 将结果输出到日志文件gdb.txt中：
-
+```
 (gdb) set height 0
 (gdb) set logging on
 Copying output to gdb.txt.
@@ -56,57 +66,38 @@ gdb.txt的内容：
 0x602020:       0x0     0x21
 0x602030:       0x400b30 <_ZTV3ABC+16>  0x0
 ….
-1
-2
-3
-4
-5
-5） 过滤gdb.txt：
-
+```
+* 过滤gdb.txt：
+```
 awk '{print $2"/n"$3}' gdb.txt|C++filt|grep vtable>gdb_vtable.txt
-1
 gdb_vtable.txt的内容为：
 
 <vtable for ABC+16>
 <vtable for ABC+16>
 <vtable for ABC+16>
 <vtable for ABC+16>
-1
-2
-3
-4
-6） 将gdb_vtable.txt的内容导入到SQLServer中（如果记录不多，可以用Excel代替）。表名为gdb_vtable，第一列Col001为符号。对其分组求和：
+```
 
+* 将gdb_vtable.txt的内容导入到SQLServer中（如果记录不多，可以用Excel代替）。表名为gdb_vtable，第一列Col001为符号。对其分组求和：
+
+```
 select Col001, count(1) quantity from gdb_vtable
 group by Col001
 order by quantity desc
-1
-2
-3
+```
 结果为：
 
+```
 Col001                                                                                    quantity
 <vtable for ABC+16>                                                              1000
 <vtable for std::bad_alloc@@GLIBCXX_3.4+16>          
-1
-2
-3
+```
 可知core里有1000个ABC，遍历使用ABC的代码，可知存在泄漏。
 
-### 死锁
+#### 查死锁
 
 清单 7. 切换到线程 5 的输出
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
+```
 (gdb) thread 5 
 [Switching to thread 5 (Thread 0x41e37940 (LWP 6722))]#0  0x0000003d1a80d4c4 in 
 __lll_lock_wait () from /lib64/libpthread.so.0 
@@ -118,31 +109,9 @@ __lll_lock_wait () from /lib64/libpthread.so.0
 #4  0x0000000000400ad7 in thread1 (arg=0x0) at lock.cpp:43 
 #5  0x0000003d1a80673d in start_thread () from /lib64/libpthread.so.0 
 #6  0x0000003d19cd40cd in clone () from /lib64/libc.so.6
+```
 清单 8. 线程 4 和线程 5 的输出
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
+```
 (gdb) f 3 
 #3  0x0000000000400a9b in func1 () at lock.cpp:18 
 18          pthread_mutex_lock(&mutex2); 
@@ -167,7 +136,7 @@ __kind = 0, __spins = 0, __list = {__prev = 0x0, __next = 0x0}},
  __size = "\002\000\000\000\000\000\000\000C\032\000\000\001", '\000'
 <repeats 26 times>, __align = 2} 
 (gdb)
-
+```
 ### calling convetion
 readelf -h binary
 
