@@ -13,7 +13,14 @@ to be non-negative, there is slack if the variable is positive. The term complem
 slackness refers to a relationship between the slackness in a primal
 constraint and the slackness (positivity) of the associated dual variable. 
 
-
+<br>
+The complementary slackness conditions guarantee that the values of the
+primal and dual are the same. In the diet problem, the pill seller guarantees
+that pills are no more expensive than food. CS guarantees that when you solve
+the problem, pills cost exactly the same as food for those foods that you actually
+buy. (By the way, nothing rules out the possibility that there is a food that costs
+exactly as much as its nutritional content, but that you don’t buy the food. If
+this happens, you have no slack in both primal variable and dual constraint.)
 
 ### reference
 * [1] https://www.quora.com/What-is-the-meaning-of-unbounded-in-linear-programming-problems What is the meaning of unbounded in linear programming problems?
