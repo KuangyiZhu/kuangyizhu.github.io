@@ -7,3 +7,4 @@
 ### monte calro
 * http://www.palisade.com/risk/monte_carlo_simulation.asp
 * https://twiecki.github.io/blog/2015/11/10/mcmc-sampling/
+* https://zhuanlan.zhihu.com/p/30458774
