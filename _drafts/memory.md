@@ -53,6 +53,10 @@ If memory information was not dumped to /var/log/messages, then SysRq was not en
 # echo 1 > /proc/sys/kernel/sysrq
 ```
 
+
+### memory barrier
+http://lday.me/2017/11/04/0016_what_is_memory_barriers/
+
 ### reference
 * [1] https://medium.com/@andrestc/implementing-malloc-and-free-ba7e7704a473 implementing malloc and free
 * [2] https://blog.csdn.net/jasonblog/article/details/5989224 delete this
