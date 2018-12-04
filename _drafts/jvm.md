@@ -84,6 +84,10 @@ jmap -heap pid #print heap summary
 jmap pid #print the memory mapping
 ```
 
+### long and double non atomic issue
+Java long and double are not atomic in 32 bit machines, but atomic in 64 bit machines with some of the 64 bit JVMs. why its dependant on machine bit length? Because 32 bit machine needs two writes for long(as long is 64 bit). Read this for detailed info.
+https://docs.oracle.com/javase/specs/jls/se7/html/jls-17.html#jls-17.7
+
 #### misc
 2. Java
  2.3. jni and principle
