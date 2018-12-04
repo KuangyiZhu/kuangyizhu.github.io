@@ -124,6 +124,7 @@ For JRockit is server
 * [2] https://www.oracle.com/technetwork/articles/java/architect-evans-pt1-2266278.html Understanding Java JIT Compilation with JITWatch, Part 1
 * [3] https://www.cnblogs.com/zengkefu/p/6910355.html 使用hsdis查看jit生成的汇编代码
 * [4] https://blog.csdn.net/hengyunabc/article/details/26898657 
+* [5] https://salilsurendran.wordpress.com/2015/01/01/jvm-memory-barriers/ Java opcodes for volatile variables
 ### external references
 https://www.cnblogs.com/chenyangyao/p/5269622.html 利用hsdis和JITWatch查看分析HotSpot JIT compiler生成的汇编代码
 深入理解Java虚拟机：JVM高级特性与最佳实践 第2版 高清PDF+源码_Linux下载_Linux公社-Linux系统门户网站
