@@ -121,7 +121,8 @@ For JRockit is server
  2.13. serialization
  2.14. how actually java works
 
-
+### volatile
+指令“lock; addl $0,0(%%esp)”表示加锁，把0加到栈顶的内存单元，该指令操作本身无意义，但这些指令起到内存屏障的作用，让前面的指令执行完成。具有XMM2特征的CPU已有内存屏障指令，就直接使用该指令。
 
 ### references
 * [1] https://docs.oracle.com/javase/tutorial/essential/environment/paths.html PATH and CLASSPATH
@@ -129,6 +130,9 @@ For JRockit is server
 * [3] https://www.cnblogs.com/zengkefu/p/6910355.html 使用hsdis查看jit生成的汇编代码
 * [4] https://blog.csdn.net/hengyunabc/article/details/26898657 
 * [5] https://salilsurendran.wordpress.com/2015/01/01/jvm-memory-barriers/ Java opcodes for volatile variables
+* [6] https://www.cnblogs.com/xrq730/p/7048693.html 就是要你懂Java中volatile关键字实现原理
+* [7] https://my.oschina.net/tantexian/blog/808032 精确解释java的volatile之可见性、原子性、有序性（通过汇编语言）
+
 ### external references
 https://www.cnblogs.com/chenyangyao/p/5269622.html 利用hsdis和JITWatch查看分析HotSpot JIT compiler生成的汇编代码
 深入理解Java虚拟机：JVM高级特性与最佳实践 第2版 高清PDF+源码_Linux下载_Linux公社-Linux系统门户网站
