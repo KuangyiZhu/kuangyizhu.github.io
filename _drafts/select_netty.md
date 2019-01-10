@@ -28,3 +28,4 @@ Each one of these copies (and transitions) has a very noticeable performance cos
 * [3] https://yahooeng.tumblr.com/post/104861108931/mdbm-high-speed-database
 * [4] https://www.zhihu.com/question/24322387 netty
 * [5] https://www.nada.kth.se/kurser/kth/2D1392/05/lectures/lecture_2.pdf IP ARP
+* [6] https://www.slideshare.net/DherytaJaisinghani/tutorial-wifi-driver-code-opening-nuts-and-bolts-of-linux-wifi-subsystem wireless kernel
