@@ -127,6 +127,10 @@ For JRockit is server
 ### Memory Analyzer
 http://www.eclipse.org/mat/
 
+
+### javac code generation
+http://hannesdorfmann.com/annotation-processing/annotationprocessing101
+
 ### references
 * [1] https://docs.oracle.com/javase/tutorial/essential/environment/paths.html PATH and CLASSPATH
 * [2] https://www.oracle.com/technetwork/articles/java/architect-evans-pt1-2266278.html Understanding Java JIT Compilation with JITWatch, Part 1
