@@ -36,6 +36,8 @@ wangsquirrel   150
 
 进程T2调用lock_sock_nested函数时会调用__lock_sock函数：
 
+send -> sys_call->SYS_SEND->sys_send->sock_sendmsg函数，sock_sendmsg函数又会调用sock_sendmsg_noac函数，最后调用由struct socket数据结构中struct proto_ops *ops数据域引用的协议实现函数sendmsg； 在TCP/IP协议中最终会调用inet_sendmsg, inet_sendmsg 调用sock的proto 调用tcp_sendmsg
+
 ### references
 * [1] https://www.ibm.com/developerworks/cn/linux/l-async/
 * [2] https://blog.csdn.net/shreck66/article/details/48765533
@@ -48,3 +50,4 @@ wangsquirrel   150
 * [9] https://segmentfault.com/q/1010000000522752
 * [10] http://cxd2014.github.io/2016/07/30/socket-implement/
 * [11] https://blog.csdn.net/u011130578/article/details/45040273
+* [12] http://cxd2014.github.io/2016/07/30/socket-implement/
