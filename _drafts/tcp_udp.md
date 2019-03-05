@@ -51,3 +51,4 @@ send -> sys_call->SYS_SEND->sys_send->sock_sendmsg函数，sock_sendmsg函数又
 * [10] http://cxd2014.github.io/2016/07/30/socket-implement/
 * [11] https://blog.csdn.net/u011130578/article/details/45040273
 * [12] http://cxd2014.github.io/2016/07/30/socket-implement/
+* [13] http://drmingdrmer.github.io/tech/programming/network/2015/07/28/close-shutdown.html
