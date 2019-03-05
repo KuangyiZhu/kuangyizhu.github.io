@@ -27,6 +27,15 @@ wangsquirrel   150
 2014-05-28 回答
 系统调用一般都需要保存用户程序得上下文(context), 在进入内核得时候需要保存用户态得寄存器，在内核态返回用户态得时候会恢复这些寄存器得内容。这是一个开销的地方。 如果需要在不同用户程序间切换的话，那么还要更新cr3寄存器，这样会更换每个程序的虚拟内存到物理内存映射表的地址，也是一个比较高负担的操作。
 
+        由2.1 Socket系统调用我们知道，一个TCP socket在内核有一个数据结构，这个数据结构是不能被两个及其以上的使用者同时访问的，否则就会由于数据不一致导致严重的问题。在Linux中，TCP socket的使用者有两种：进程（线程）和软中断。同一时间可能会有两个进程（线程），或位于不同CPU的两个软中断，或进程（线程）与软中断访问同一个socket。既然socket在同一时刻只能被一个使用者访问，那么互斥机制是如何实现的呢？是使用锁完成的。进程（线程）在访问socket之前会申请锁，访问结束时释放锁。软中断也是一样，但软中断所申请的锁与进程（线程）不同。TCP的内核同步就是靠锁实现的。由于TCP并不区分进程与线程，所以下面进程和线程一律用进程指代。
+--------------------- 
+作者：Remy1119 
+来源：CSDN 
+原文：https://blog.csdn.net/u011130578/article/details/45040273 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+进程T2调用lock_sock_nested函数时会调用__lock_sock函数：
+
 ### references
 * [1] https://www.ibm.com/developerworks/cn/linux/l-async/
 * [2] https://blog.csdn.net/shreck66/article/details/48765533
@@ -38,3 +47,4 @@ wangsquirrel   150
 * [8] https://markhneedham.com/blog/2012/07/15/tcpdump-learning-how-to-read-udp-packets/
 * [9] https://segmentfault.com/q/1010000000522752
 * [10] http://cxd2014.github.io/2016/07/30/socket-implement/
+* [11] https://blog.csdn.net/u011130578/article/details/45040273
