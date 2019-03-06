@@ -22,6 +22,9 @@ Each one of these copies (and transitions) has a very noticeable performance cos
 * transition to kernel code
 * kernel sets up DMA (direct-memory-access) for network card to read and send pieces
 * transition back to user space
+
+
+
 ### reference
 * [1] https://blog.csdn.net/u010481276/article/details/51093800
 * [2] https://blog.csdn.net/YACHL882828/article/details/53819708
@@ -30,3 +33,4 @@ Each one of these copies (and transitions) has a very noticeable performance cos
 * [5] https://www.nada.kth.se/kurser/kth/2D1392/05/lectures/lecture_2.pdf IP ARP
 * [6] https://www.slideshare.net/DherytaJaisinghani/tutorial-wifi-driver-code-opening-nuts-and-bolts-of-linux-wifi-subsystem wireless kernel
 * [7] http://www.haifux.org/lectures/217/netLec5.pdf linux kernel socket subsystem
+* [8] https://segmentfault.com/a/1190000003063859
