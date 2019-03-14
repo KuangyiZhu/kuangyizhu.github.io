@@ -124,6 +124,11 @@ For JRockit is server
 ### volatile
 指令“lock; addl $0,0(%%esp)”表示加锁，把0加到栈顶的内存单元，该指令操作本身无意义，但这些指令起到内存屏障的作用，让前面的指令执行完成。具有XMM2特征的CPU已有内存屏障指令，就直接使用该指令。
 
+### lock
+https://www.baeldung.com/java-concurrent-locks
+http://www.blogjava.net/jinfeng_wang/archive/2016/12/14/432088.html
+
+
 ### Memory Analyzer
 http://www.eclipse.org/mat/
 
