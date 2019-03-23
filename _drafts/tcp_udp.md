@@ -40,6 +40,8 @@ send -> sys_call->SYS_SEND->sys_send->sock_sendmsg函数，sock_sendmsg函数又
 
 系统调用顺序 sys_call -> af_inet -> tcp
 
+关于系统调用SYSCALL_DEFINEx
+
 
 ### references
 * [1] https://www.ibm.com/developerworks/cn/linux/l-async/
@@ -57,3 +59,4 @@ send -> sys_call->SYS_SEND->sys_send->sock_sendmsg函数，sock_sendmsg函数又
 * [13] http://drmingdrmer.github.io/tech/programming/network/2015/07/28/close-shutdown.html
 * [14] https://blog.csdn.net/junjun150013652/article/details/38032705
 * [15] https://www.cnblogs.com/wanpengcoder/p/7623072.html
+* [16] https://blog.csdn.net/hxmhyp/article/details/22699669
