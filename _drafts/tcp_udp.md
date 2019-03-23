@@ -62,3 +62,5 @@ application -> wrapper routing in glibc -> system_call -> int or sysentry -> sys
 * [14] https://blog.csdn.net/junjun150013652/article/details/38032705
 * [15] https://www.cnblogs.com/wanpengcoder/p/7623072.html
 * [16] https://blog.csdn.net/hxmhyp/article/details/22699669
+* [17] https://blog.baishancloud.com/tech/programming/network/2017/11/22/close-shutdown.html
+* [18] https://my.oschina.net/alchemystar/blog/1821680
