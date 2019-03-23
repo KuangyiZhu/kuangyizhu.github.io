@@ -40,7 +40,9 @@ send -> sys_call->SYS_SEND->sys_send->sock_sendmsg函数，sock_sendmsg函数又
 
 系统调用顺序 sys_call -> af_inet -> tcp
 
-关于系统调用SYSCALL_DEFINEx
+关于系统调用SYSCALL_DEFINEx https://blog.csdn.net/hxmhyp/article/details/22699669
+why system call is necessary: call from user space to kernel space
+application -> wrapper routing in glibc -> system_call -> int or sysentry -> system_call_handler-> sysexit
 
 
 ### references
