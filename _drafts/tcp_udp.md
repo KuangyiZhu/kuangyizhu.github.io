@@ -38,6 +38,9 @@ wangsquirrel   150
 
 send -> sys_call->SYS_SEND->sys_send->sock_sendmsg函数，sock_sendmsg函数又会调用sock_sendmsg_noac函数，最后调用由struct socket数据结构中struct proto_ops *ops数据域引用的协议实现函数sendmsg； 在TCP/IP协议中最终会调用inet_sendmsg, inet_sendmsg 调用sock的proto 调用tcp_sendmsg
 
+系统调用顺序 sys_call -> af_inet -> tcp
+
+
 ### references
 * [1] https://www.ibm.com/developerworks/cn/linux/l-async/
 * [2] https://blog.csdn.net/shreck66/article/details/48765533
@@ -53,3 +56,4 @@ send -> sys_call->SYS_SEND->sys_send->sock_sendmsg函数，sock_sendmsg函数又
 * [12] http://cxd2014.github.io/2016/07/30/socket-implement/
 * [13] http://drmingdrmer.github.io/tech/programming/network/2015/07/28/close-shutdown.html
 * [14] https://blog.csdn.net/junjun150013652/article/details/38032705
+* [15] https://www.cnblogs.com/wanpengcoder/p/7623072.html
