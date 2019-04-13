@@ -35,6 +35,8 @@ https://zhuanlan.zhihu.com/p/23804838
 https://zhuanlan.zhihu.com/p/28623599
 
 ### Hungarian algorithm
+https://www.cnblogs.com/YiXiaoZhou/p/5943775.html
+https://blog.csdn.net/u014754127/article/details/78086014
 
 ### Steepest descendent method -- current direction changes most
 ### Newton method -- 
