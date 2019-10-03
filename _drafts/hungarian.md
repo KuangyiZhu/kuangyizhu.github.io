@@ -1,0 +1,14 @@
+* http://www.cse.ust.hk/~golin/COMP572/Notes/Matching.pdf
+* http://www.columbia.edu/~cs2035/courses/ieor8100.F12/lec4.pdf
+* https://brilliant.org/wiki/hungarian-matching/
+* https://brilliant.org/wiki/matching-algorithms/#graph-labeling
+* http://www.math.harvard.edu/archive/20_spring_05/handouts/assignment_overheads.pdf
+* https://skywt.cn/posts/bipartite-matching/
+* https://skywt.cn/posts/network-flows/
+* https://blog.csdn.net/gengli2017/article/details/84259878
+* https://www.cs.upc.edu/~erodri/webpage/cps/theory/lp/network/slides.pdf
+* https://cloud.tencent.com/developer/article/1441604
+* https://www.geeksforgeeks.org/hungarian-algorithm-assignment-problem-set-1-introduction/
+* http://hungarianalgorithm.com/examplehungarianalgorithm.php
+* http://www.doc88.com/p-337742072489.html
+* https://www.xuebuyuan.com/1870626.html
