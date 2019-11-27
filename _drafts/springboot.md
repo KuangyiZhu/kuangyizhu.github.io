@@ -1,3 +1,6 @@
+### ApplicationRunner
+https://blog.csdn.net/zknxx/article/details/52196427
+
 ### transactional
 https://blog.csdn.net/liyantianmin/article/details/72859573
 https://blog.csdn.net/qq_20597727/article/details/84868035
