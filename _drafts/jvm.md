@@ -136,6 +136,24 @@ http://www.eclipse.org/mat/
 ### javac code generation
 http://hannesdorfmann.com/annotation-processing/annotationprocessing101
 
+
+Java
+cGlib
+https://dzone.com/articles/creating-a-proxy-object-using-cglib
+https://www.programcreek.com/java-api-examples/?class=net.sf.cglib.proxy.Enhancer&method=create
+
+为什么Java String哈希乘数为31？
+https://juejin.im/post/5ba75d165188255c6a043b96
+
+
+
+
+
+
+
+### Maven
+https://my.oschina.net/sunchp/blog/100634
+
 ### references
 * [1] https://docs.oracle.com/javase/tutorial/essential/environment/paths.html PATH and CLASSPATH
 * [2] https://www.oracle.com/technetwork/articles/java/architect-evans-pt1-2266278.html Understanding Java JIT Compilation with JITWatch, Part 1
