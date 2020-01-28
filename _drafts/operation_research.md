@@ -44,3 +44,9 @@ form φ(x) = x.
 
 ### 最优化方法
 http://person.zju.edu.cn/attachments/2016-11/07-1479199468-702282.pdf
+
+Optimize
+Scholastic optimizing problem
+Eular equation
+https://people.stfx.ca/tleo/AdvMacroLec3.pdf
+https://math.stackexchange.com/questions/782621/difference-between-variation-of-calculus-problems-and-control-theory-problems
