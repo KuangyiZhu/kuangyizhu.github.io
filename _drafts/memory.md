@@ -16,6 +16,10 @@ stack 生成的自動物件，都會在 out-of-block 的時候，呼叫 destruct
 
 majflt代表major fault，中文名叫大错误，minflt代表minor fault，中文名叫小错误。这两个数值表示一个进程自启动以来所发生的缺页中断的次数。
 
+### 查看cpu绑定
+通过ps -eo pid,args,psr命令查看CPU与进程是否绑定成功：
+https://zhuanlan.zhihu.com/p/57470627
+
 ### 发生缺页中断后，执行了那些操作？
 
 当一个进程发生缺页中断的时候，进程会陷入内核态，执行以下操作：
@@ -32,6 +36,8 @@ majflt代表major fault，中文名叫大错误，minflt代表minor fault，中�
 
 这样子做主要是因为::
 brk分配的内存需要等到高地址内存释放以后才能释放（例如，在B释放之前，A是不可能释放的，这就是内存碎片产生的原因，什么时候紧缩看下面），而mmap分配的内存可以单独释放。
+
+### 查看
 
 ### Memory Fragmentation
 
