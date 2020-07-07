@@ -1,0 +1,22 @@
+{a1, a2, a3, a4, a5, a6}
+
+12345
+ 23456
+_save 1 3456
+_save 12 456
+_save 123 56
+_save 1234 6
+
+
+
+Find median
+Stream
+
+set to large queue
+Pop one to small queue
+
+If even
+ Small + large /2
+
+Odd
+ large
