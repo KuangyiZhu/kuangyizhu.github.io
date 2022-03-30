@@ -22,6 +22,11 @@ buy. (By the way, nothing rules out the possibility that there is a food that co
 exactly as much as its nutritional content, but that you don’t buy the food. If
 this happens, you have no slack in both primal variable and dual constraint.)
 
+
+### column generation
+https://xijunlee.github.io/2017/10/12/%E4%BB%8E%E5%8D%95%E7%BA%AF%E5%9E%8B%E6%B3%95%E5%88%B0%E5%88%97%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95/
+https://www.cnblogs.com/skabyy/p/13397869.html
+
 ### reference
 * [1] https://www.quora.com/What-is-the-meaning-of-unbounded-in-linear-programming-problems What is the meaning of unbounded in linear programming problems?
 * [2] https://en.wikipedia.org/wiki/Constraint_(mathematics) Constraint (mathematics)
