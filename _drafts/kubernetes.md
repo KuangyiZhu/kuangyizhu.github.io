@@ -9,3 +9,10 @@ Docker
 ### docker
 https://draveness.me/docker
 http://dockone.io/article/783
+
+Namespace and Cgroup
+https://www.cnblogs.com/wjoyxt/p/9935098.html
+
+
+K8s
+https://www.modb.pro/db/152568
