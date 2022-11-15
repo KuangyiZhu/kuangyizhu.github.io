@@ -16,3 +16,6 @@ https://www.cnblogs.com/wjoyxt/p/9935098.html
 
 K8s
 https://www.modb.pro/db/152568
+
+cgroup
+https://zhuanlan.zhihu.com/p/388101355
